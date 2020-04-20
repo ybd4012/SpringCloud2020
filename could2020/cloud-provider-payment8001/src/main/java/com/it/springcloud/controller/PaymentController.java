@@ -15,9 +15,8 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/payment/add")
-    public CommonResult add(Payment payment){
+    public CommonResult add(@RequestBody Payment payment){
         int resultCode = paymentService.add(payment);
-        log.info("********************status:"+resultCode);
         if(resultCode>0){
             return new CommonResult(200,"添加到数据库成功",resultCode);
         }else{
