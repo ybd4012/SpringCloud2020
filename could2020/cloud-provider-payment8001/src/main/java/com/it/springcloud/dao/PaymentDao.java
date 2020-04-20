@@ -8,5 +8,5 @@ public interface PaymentDao {
 
     public int add(Payment payment);
 
-    public Payment getPaymentById(Integer id);
+    public Payment getPaymentById(Long id);
 }
