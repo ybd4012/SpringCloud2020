@@ -18,19 +18,18 @@ public class PaymentController {
     public CommonResult add(@RequestBody Payment payment){
         int resultCode = paymentService.add(payment);
         if(resultCode>0){
-            return new CommonResult(200,"添加到数据库成功",resultCode);
+            return new CommonResult(200,"添加到数据库成功8001",resultCode);
         }else{
-            return new CommonResult(444,"添加到数据库失败",null);
+            return new CommonResult(444,"添加到数据库失败8001",null);
         }
     }
     @GetMapping("/payment/getPaymentById/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id){
         Payment resultEntities = paymentService.getPaymentById(id);
-        log.info("****************Wstatus:"+resultEntities);
         if(resultEntities!=null){
-            return new CommonResult(200,"查询成功",resultEntities);
+            return new CommonResult(200,"查询成功8001",resultEntities);
         }else{
-            return new CommonResult(444,"查询失败",null);
+            return new CommonResult(444,"查询失败8001",null);
         }
     }
 

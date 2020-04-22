@@ -12,6 +12,18 @@
     <artifactId>cloud-consumer-order80</artifactId>
 
 <dependencies>
+<!--    工程重构-->
+    <dependency>
+        <groupId>com.it.springcloud</groupId>
+        <artifactId>cloud-aip-commons</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+<!--        eureka-->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+<!--    web actuator-->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>

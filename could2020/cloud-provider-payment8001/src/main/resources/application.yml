@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-provider-payment8001
+    name: cloud-provider-payment
   #数据源
   datasource:
     username: root
@@ -18,3 +18,17 @@ spring:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   type-aliases-package: com.it.springcloud.entities    # 所有Entity别名类所在包com.it.springcloud.entities
+
+eureka:
+  client:
+#    表示将自己注册进入eureka
+    register-with-eureka: true
+#    是否从eureka中抓取已有的注册信息，单节点任意，集群必须为true才可配合ribbon使用负载均衡
+    fetch-registry: true
+#    将自己注册到那个地址
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+#      修改主机名称
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true
