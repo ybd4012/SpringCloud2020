@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/cloud-consumer-oder80/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-springcloud-payment8004/pom.xml" />
       </set>
     </option>
   </component>

@@ -31,5 +31,8 @@ public class PaymentController {
             return new CommonResult(444,"查询失败8002",null);
         }
     }
-
+    @GetMapping("/payment/lb")
+    public String getLB(){
+        return "8002";
+    }
 }
